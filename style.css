@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;            
+}
+
+body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif; 
+    
+}
+
+.titulo {
+    background: #3b76e6;
+    color: white;
+}
+
+table {
+    background: #e6e3e3;
+}
+
+input   {
+    background: #303271;
+    color: white;
+}
+
+.texto {
+    background: white;
+    color: #303271;
+}
+
+.resultados {
+    background: #96bbff;
+    font-size: smaller;
+}
+
+.mensagemInsucesso {
+    color: red;
+}
+
+.mensagemSucesso {
+    color: #303271;
+}

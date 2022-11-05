@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Estados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form name="form" class="formulario">
+        <table border="1" width="600px" >
+            <tr>
+                <td rowspan="22">ESQUERDA</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td rowspan="22">DIREITA</td>
+            </tr>
+            <tr>
+                <td colspan="15" class="titulo">CADASTRO DE ESTADOS</td>
+            </tr>
+            <tr>                
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                
+            </tr>
+            <tr>
+                <td colspan="15"></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="titulo">NOME</td>
+                <td colspan="1"></td>
+                <td colspan="4" class="titulo">SIGLA</td>
+                <td colspan="1"></td>
+                <td colspan="4" class="titulo">STATUS</td>
+                <td colspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input type="text" class="texto" name="CAMPO_NOME" id="CAMPO_NOME" onblur="validarCampoNome()">
+                </td>
+                <td colspan="1"></td>
+                <td colspan="4">
+                    <input type="text" class="texto" name="CAMPO_SIGLA" id="CAMPO_SIGLA" onblur="validarCampoSigla()">
+                </td>
+                <td colspan="1"></td>
+                <td colspan="4">
+                    <select name="CAMPO_STATUS" id="CAMPO_STATUS" onblur="validarCampoStatus()">
+                        <option value=""></option>
+                        <option value="ativo">ATIVO</option>
+                        <option value="desativado">DESATIVADO</option>
+                    </select>
+                </td>
+                <td colspan="1"></td>                
+            </tr>
+            <tr>
+                <td colspan="4" id="MENSAGEM_NOME" class="mensagemInsucesso"></td>
+                <td colspan="1"></td>
+                <td colspan="4" id="MENSAGEM_SIGLA" class="mensagemInsucesso"></td>
+                <td colspan="1"></td>
+                <td colspan="4" id="MENSAGEM_STATUS" class="mensagemInsucesso"></td>
+                <td colspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="15"></td>
+            </tr>
+            <tr>                
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                
+            </tr>
+            <tr>
+                <td colspan="1"></td>
+                <td colspan="1"></td>
+                <td colspan="1"></td>
+                <td colspan="1"></td>
+                <td colspan="3">
+                    <input type="button" onclick="" value="CANCELAR">
+                </td>
+                <td colspan="1"></td>
+                <td colspan="3">
+                    <input type="button" onclick="validarCampos()" value="CADASTRAR">
+                </td>
+                <td colspan="1"></td>
+                <td colspan="1"></td>
+                <td colspan="1"></td>
+                <td colspan="1"></td>
+            </tr>
+            <tr>                
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                
+            </tr>
+            <tr>
+                <td colspan="1"></td>
+                <td colspan="1"></td>
+                <td colspan="1"></td>
+                <td colspan="1"></td>
+                <td colspan="7" id="MESAGEM_INSUCESSO" class="mensagemInsucesso"></td>
+                <td colspan="1"></td>
+                <td colspan="1"></td>
+                <td colspan="1"></td>
+                <td colspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="1"></td>
+                <td colspan="1"></td>
+                <td colspan="1"></td>
+                <td colspan="1"></td>
+                <td colspan="7" id="MENSAGEM_SUCESSO" class="mensagemSucesso"></td>
+                <td colspan="1"></td>
+                <td colspan="1"></td>
+                <td colspan="1"></td>
+                <td colspan="1"></td>
+            </tr>
+            <tr>                
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                
+            </tr>
+            <tr>                
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                
+            </tr>
+            <tr class="titulo">
+                <td colspan="2">CÓDIGO</td>
+                <td colspan="6">NOME</td>
+                <td colspan="4">STATUS</td>
+                <td colspan="1">DETAHAR</td>  
+                <td colspan="1">EDITAR</td> 
+                <td colspan="1">EXCLUIR</td>                            
+                   
+            </tr>            
+            <tr class="resultados">
+                <td colspan="2">1</td>
+                <td colspan="6">MATO GROSSO</td>
+                <td colspan="4">1-ATIVO</td>
+                <td colspan="1">
+                    <input type="button" value="DETALHAR">
+                </td>
+                <td colspan="1">
+                    <input type="button" value="EDITAR">
+                </td>
+                <td colspan="1">
+                    <input type="button" value="EXCLUIR">
+                </td>
+            </tr>
+            <tr class="resultados">
+                <td colspan="2">2</td>
+                <td colspan="6">MATO GROSSO DO SUL</td>
+                <td colspan="4">1-ATIVO</td>
+                <td colspan="1">
+                    <input type="button" value="DETALHAR">
+                </td>
+                <td colspan="1">
+                    <input type="button" value="EDITAR">
+                </td>
+                <td colspan="1">
+                    <input type="button" value="EXCLUIR">
+                </td>
+            </tr>
+            <tr class="resultados">
+                <td colspan="2">3</td>
+                <td colspan="6">GOIÁS</td>
+                <td colspan="4">1-ATIVO</td>
+                <td colspan="1">
+                    <input type="button" value="DETALHAR">
+                </td>
+                <td colspan="1">
+                    <input type="button" value="EDITAR">
+                </td>
+                <td colspan="1">
+                    <input type="button" value="EXCLUIR">
+                </td>
+            </tr>
+            <tr class="resultados">
+                <td colspan="2">4</td>
+                <td colspan="6">RIO DE JANEIRO</td>
+                <td colspan="4">1-ATIVO</td>
+                <td colspan="1">
+                    <input type="button" value="DETALHAR">
+                </td>
+                <td colspan="1">
+                    <input type="button" value="EDITAR">
+                </td>
+                <td colspan="1">
+                    <input type="button" value="EXCLUIR">
+                </td>
+            </tr>
+            <tr class="resultados">
+                <td colspan="2">5</td>
+                <td colspan="6">SÃO PAULO</td>
+                <td colspan="4">1-ATIVO</td>
+                <td colspan="1">
+                    <input type="button" value="DETALHAR">
+                </td>
+                <td colspan="1">
+                    <input type="button" value="EDITAR">
+                </td>
+                <td colspan="1">
+                    <input type="button" value="EXCLUIR">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="15"></td>
+            </tr>
+        </table>
+    </form>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
