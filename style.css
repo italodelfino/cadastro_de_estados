@@ -24,11 +24,14 @@ table {
 input   {
     background: #303271;
     color: white;
+    font-size: 18px;
 }
 
 .texto {
     background: white;
     color: #303271;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .resultados {
@@ -38,8 +41,10 @@ input   {
 
 .mensagemInsucesso {
     color: red;
+    font-weight: bold;
 }
 
 .mensagemSucesso {
     color: #303271;
+    font-weight: bold;
 }

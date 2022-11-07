@@ -42,12 +42,15 @@ function validarCampoStatus()
 
 function validarCampos()
 {
-    if(validarCampoNome() && validarCampoSigla() && validarCampoStatus())
+    if(validarCampoNome() & validarCampoSigla() & validarCampoStatus())
     {
         document.getElementById('MENSAGEM_SUCESSO').innerHTML = "O cadastro foi realizado com sucesso";
+        document.getElementById('MENSAGEM_SUCESSO').className = "mensagemSucesso";
+
     }
     else
     {
-        document.getElementById('MENSAGEM_INSUCESSO').innerHTML = "Existem campos a serem preenchidos";
+        document.getElementById('MENSAGEM_SUCESSO').innerHTML = "Existem campos a serem preenchidos";
+        document.getElementById('MENSAGEM_SUCESSO').className = "mensagemInsucesso";
     }
 }
